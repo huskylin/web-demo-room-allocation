@@ -1,0 +1,10 @@
+.room-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin: 20px 0;
+}
+
+.room-note {
+  color: var(--disable-color);
+}

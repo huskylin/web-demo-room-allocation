@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 import { KEYCODE } from '../utils/keycode';
@@ -16,6 +16,10 @@ function CustomInputNumber({
   disabled = false,
 }) {
   const [number, setNumber] = useState(value);
+
+  useEffect(() => {
+    onChange({ name, value: number });
+  }, [number]);
 
   const add = () => {
     setNumber((pre) => {
@@ -89,7 +93,6 @@ function CustomInputNumber({
     const value = e.target.value;
     if (Number(value) && value >= min && value <= max) {
       setNumber(Number(value));
-      onChange(e);
     }
   };
 

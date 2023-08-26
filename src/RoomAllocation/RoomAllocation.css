@@ -1,0 +1,19 @@
+.room-allocation-container {
+  width: 600px;
+  padding: 0 15px;
+  border: 1px solid var(--normal-color);
+  border-style: dashed;
+}
+
+.room-allocation-hint {
+  margin: 15px 0;
+  padding: 15px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  background-color: var(--bg-color);
+  font-size: 16px;
+}
+
+hr {
+  border: 1px solid var(--disable-color);
+}
